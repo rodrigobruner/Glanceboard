@@ -1,0 +1,9 @@
+<div class="carousel carousel-vertical rounded-box w-[100vw] h-[90vh] flex items-center justify-center">
+  <div class="card text-primary-content w-[90vw] h-[90vh] flex items-center justify-center">
+    <div class="card-body flex flex-col items-center justify-center w-full h-full">
+      <ng-container *ngFor="let comp of components">
+        <ng-container *ngComponentOutlet="comp"></ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>
