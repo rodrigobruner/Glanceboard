@@ -9,4 +9,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('glanceboard');
+
+  setTheme(event: Event) {
+    const checked = (event.target as HTMLInputElement).checked;
+    const theme = checked ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  }
 }
