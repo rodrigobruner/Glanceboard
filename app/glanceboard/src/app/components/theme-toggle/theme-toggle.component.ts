@@ -1,8 +1,10 @@
 import { Component, Input } from '@angular/core';
 
+
 @Component({
   selector: 'theme-toggle',
   standalone: true,
+  imports: [],
   templateUrl: './theme-toggle.component.html'
 })
 export class ThemeToggleComponent {
