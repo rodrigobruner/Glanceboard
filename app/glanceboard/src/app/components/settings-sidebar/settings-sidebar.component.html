@@ -2,12 +2,17 @@
   <input id="settings-sidebar" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content">
     <!-- Page content here -->
-    <label for="settings-sidebar" class="drawer-button btn btn-primary">Open drawer</label>
+    <label for="settings-sidebar" class="drawer-button btn primary-content">
+      <fa-icon [icon]="['fas', 'gear']"></fa-icon>
+    </label>
   </div>
   <div class="drawer-side">
     <label for="settings-sidebar" aria-label="close sidebar" class="drawer-overlay"></label>
     <div class="menu bg-base-200 min-h-full w-2/3 p-4">
         <label for="settings-sidebar" class="btn btn-sm btn-circle absolute top-2 right-2">✕</label>
+        <h3 class="text-xl">Settings</h3>
+        <div class="divider"></div>
+        <theme-toggle></theme-toggle>
     </div>
   </div>
 </div>
