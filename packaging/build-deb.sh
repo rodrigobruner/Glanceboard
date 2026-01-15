@@ -29,6 +29,9 @@ mkdir -p "$OUT_DIR"
 mkdir -p "$UI_DIR"
 
 pushd "$APP_DIR" >/dev/null
+if [[ ! -x "node_modules/.bin/ng" ]]; then
+  npm ci
+fi
 npm run build
 popd >/dev/null
 
