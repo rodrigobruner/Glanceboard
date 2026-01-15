@@ -1,0 +1,9 @@
+Package: glanceboard-ui
+Version: 0.1.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Glanceboard <rodrigo@bruner.app>
+Depends: chromium-browser | chromium, systemd
+Description: Glanceboard UI is an ambient dashboard for Raspberry Pi, inspired by iPhone StandBy.
+ It shows time, weather, calendar, and more, and is configured to run on startup.

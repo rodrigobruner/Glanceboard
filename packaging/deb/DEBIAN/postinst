@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+chmod +x /usr/local/bin/glanceboard || true
+
+if command -v systemctl >/dev/null 2>&1; then
+  systemctl daemon-reload
+  systemctl enable glanceboard.service
+  systemctl restart glanceboard.service
+fi
+
+exit 0
