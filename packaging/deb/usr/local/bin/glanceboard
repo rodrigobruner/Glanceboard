@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -e
+
+URL="file:///opt/glanceboard/ui/index.html"
+
+export DISPLAY="${DISPLAY:-:0}"
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+
+if command -v chromium-browser >/dev/null 2>&1; then
+  BROWSER="chromium-browser"
+else
+  BROWSER="chromium"
+fi
+
+"$BROWSER" \
+  --kiosk \
+  --noerrdialogs \
+  --disable-infobars \
+  --disable-session-crashed-bubble \
+  --autoplay-policy=no-user-gesture-required \
+  --start-fullscreen \
+  "$URL"
